@@ -18,7 +18,9 @@ import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import cn.iwgang.countdownview.CountdownView;
 
-public class MainActivity extends AppCompatActivity implements CountdownView.OnCountdownIntervalListener {
+public class MainActivity extends AppCompatActivity implements
+        CountdownView.OnCountdownIntervalListener,
+        MediaPlayer.OnCompletionListener {
 
     private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
     private final DecimalFormat decimalFormat = new DecimalFormat("00");
@@ -77,6 +79,13 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
     @Override
     public void onInterval(CountdownView cv, long remainTime){
         player = MediaPlayer.create(this, R.raw.beep);
+        player.setOnCompletionListener(this);
         player.start();
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mediaPlayer) {
+        mediaPlayer.release();
+        mediaPlayer = null;
     }
 }

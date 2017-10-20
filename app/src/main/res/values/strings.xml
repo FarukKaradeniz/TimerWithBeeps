@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">TimerWithBeeps</string>
+    <string name="minute">min</string>
+    <string name="second">sec</string>
+    <string name="Pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+    <string name="frequency">frequency(secs)</string>
+    <string name="set_the_timer">SET THE TIMER</string>
+    <string name="error">Error Occured!</string>
+    <string name="resume">Resume</string>
+</resources>

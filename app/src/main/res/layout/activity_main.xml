@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context="com.farukkaradeniz.timerwithbeeps.MainActivity">
+
+
+    <cn.iwgang.countdownview.CountdownView
+        android:id="@+id/countdownView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:isShowMinute="true"
+        app:isShowHour="false"
+        app:isSuffixTextBold="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:suffix=":"
+        app:suffixGravity="bottom"
+        app:suffixTextSize="48sp"
+        app:timeTextSize="80sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/countdownView"
+        app:layout_constraintStart_toStartOf="@+id/countdownView"
+        app:layout_constraintTop_toBottomOf="@+id/countdownView" />
+
+    <EditText
+        android:id="@+id/edt_minute"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="5"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start_reset" />
+
+    <EditText
+        android:id="@+id/edt_freq"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:ems="2"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/edt_minute" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/minute"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/edt_minute"
+        app:layout_constraintTop_toTopOf="@+id/edt_minute" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/frequency"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/edt_freq"
+        app:layout_constraintTop_toTopOf="@+id/edt_freq" />
+
+    <Button
+        android:id="@+id/btn_set_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/set_the_timer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_freq" />
+
+    <ToggleButton
+        android:id="@+id/btn_start_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textOff="@string/start"
+        android:textOn="@string/reset"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/countdownView"
+        app:layout_constraintTop_toBottomOf="@+id/countdownView" />
+
+    <ToggleButton
+        android:id="@+id/btn_pause_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textOn="@string/resume"
+        android:textOff="@string/Pause"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/countdownView"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/countdownView" />
+
+</android.support.constraint.ConstraintLayout>

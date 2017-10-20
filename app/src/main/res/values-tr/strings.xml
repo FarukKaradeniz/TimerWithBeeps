@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TimerWithBeeps</string>
+    <string name="minute">dk</string>
+    <string name="second">sn</string>
+    <string name="Pause">Duraklat</string>
+    <string name="start">Başlat</string>
+    <string name="reset">Sıfırla</string>
+    <string name="frequency">frekans(sn)</string>
+    <string name="set_the_timer">ZAMANLAYICIYI AYARLA</string>
+    <string name="error">Hata Oluştu</string>
+    <string name="resume">Devam Et</string>
+</resources>
